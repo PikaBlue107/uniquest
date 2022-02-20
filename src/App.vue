@@ -1,9 +1,12 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
+    <b-navbar>
+      <b-navbar-brand to="/">
+        <img src="@/assets/pearlhacks_logo_mini.png"/>
+      </b-navbar-brand>
+      <router-link to="/">Hooome</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
+    </b-navbar>
     <router-view />
   </div>
 </template>
@@ -17,7 +20,7 @@
   color: #2c3e50;
 }
 
-#nav {
+/* #nav {
   padding: 30px;
 }
 
@@ -28,5 +31,5 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
-}
+} */
 </style>
