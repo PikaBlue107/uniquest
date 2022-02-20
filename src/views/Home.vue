@@ -1,18 +1,29 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+
+    <Quest :quest="demo_quest" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Quest from "@/components/Quest.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    Quest,
+  },
+
+  data() {
+    return {
+      demo_quest: {
+        id: "demo_quest_id",
+        summary: "Demo Quest",
+        description: "Something very descriptive about what this quest is for",
+        deadline: "Feb 20 @ 11:00 AM",
+      }
+    }
   },
 };
 </script>
